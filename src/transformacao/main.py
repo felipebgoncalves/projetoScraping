@@ -33,7 +33,7 @@ df.drop(columns=['old_price_reais', 'old_price_centavos', 'new_price_reais', 'ne
 conn = sqlite3.connect('../data/quotes.db')
 
 # SALVAR O DataFrame NO BANCO DE DADOS SQLITE
-df.to_sql('mercadolivre_itens', conn, if_exists='replace', index=False)
+df.to_sql('mercadolivre_items', conn, if_exists='replace', index=False)
 
 # FECHAR CONEXÃO COM O BANCO
 conn.close()
