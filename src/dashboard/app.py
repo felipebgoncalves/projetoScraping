@@ -38,3 +38,26 @@ st.subheader('Marcas mais encontradas até a 10ª página')
 col1, col2 = st.columns([4, 2])
 
 top_10_pages_brands = df['brand'].value_counts().sort_values(ascending=False)
+col1.bar_chart(top_10_pages_brands)
+col2.write(top_10_pages_brands)
+
+# QUAL PREÇO MÉDIO POR MARCA
+st.subheader('Preço Médio por Marca')
+col1, col2 = st.columns([4, 2])
+
+avarege_price_by_brand = df.groupby('brand')['new_price'].mean().sort_values(ascending=False)
+avarege_price_by_brand = avarege_price_by_brand.round(2)
+
+col1.bar_chart(avarege_price_by_brand)
+col2.write(avarege_price_by_brand)
+
+# QUAL A SATISFAÇÃO POR MARCA
+st.subheader('Satisfação por marca')
+col1, col2 = st.columns([4, 2])
+
+df_non_zero_reviews = df[ df['reviews_rating_number'] > 0 ]
+satisfaction_by_brand = df_non_zero_reviews.groupby('brand')['reviews_rating_number'].mean().sort_values(ascending=False)
+satisfaction_by_brand = satisfaction_by_brand.round(2)
+
+col1.bar_chart(satisfaction_by_brand)
+col2.write(satisfaction_by_brand)
