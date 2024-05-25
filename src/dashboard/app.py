@@ -34,7 +34,6 @@ col3.metric(label='Preço Médio Novo (R$)', value=f'{average_new_price:.2f}')
 
 # QUAIS AS MARCAS SÃO MAIS ENCONTRADAS ATÉ A 10ª PÁGINA
 st.subheader('Marcas mais encontradas até a 10ª página')
-
 col1, col2 = st.columns([4, 2])
 
 top_10_pages_brands = df['brand'].value_counts().sort_values(ascending=False)
