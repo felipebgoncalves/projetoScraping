@@ -13,4 +13,8 @@ Para rodar o PANDAS tem que dar o seguinte comando dentro da pasta SRC
 python transformacao/main.py
 ...
 
+Para rodar o Streamlit
 
+...bash
+streamlit run dashboard/app.py
+...
