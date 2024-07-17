@@ -1,20 +1,19 @@
-# projetoScraping
+# Projeto_WebScraping
 
-Para rodar o web scraping
+#### Projeto de Webcraping desenvolvido por meio da Jornada de Dados do Luciano Filho - @lvgalvao
 
-...bash
-scrapy crawl mercadolivre -o ../../data/data.jsonl
-...
+### Alguns comandos para rodar o webscraping
+
+##### Comando para rodar o scrapy
+
+    scrapy crawl mercadolivre -o ../../data/data.jsonl
 
 
-Para rodar o PANDAS tem que dar o seguinte comando dentro da pasta SRC
+##### Para rodar o PANDAS tem que dar o seguinte comando dentro da pasta SRC
 
-...bash
-python transformacao/main.py
-...
+    python transformacao/main.py
 
-Para rodar o Streamlit
 
-...bash
-streamlit run dashboard/app.py
-...
+##### Para rodar o Streamlit
+
+    streamlit run dashboard/app.py
